@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transcrição de Áudio e Vídeo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
+<body>
     <h1>🎤 Transcrição de Áudio e Vídeo</h1>
-    <p>Site em construção. Por favor, volte mais tarde!</p>
+    <p>Envie um arquivo de áudio ou vídeo para transcrição.</p>
+    <form>
+        <label for="file">Escolha o arquivo:</label><br>
+        <input type="file" id="file" name="file" accept=".mp4,.mp3,.wav"><br><br>
+
+        <label for="model">Escolha o modelo:</label><br>
+        <select id="model" name="model">
+            <option value="tiny">Tiny (Mais Rápido)</option>
+            <option value="base">Base (Mais Rápido)</option>
+            <option value="small">Small (Mais Preciso)</option>
+            <option value="medium">Medium (Mais Preciso)</option>
+            <option value="large">Large (Máxima Precisão)</option>
+        </select><br><br>
+
+        <button type="button" onclick="alert('Essa função ainda não está conectada ao backend.')">Transcrever</button>
+    </form>
 </body>
 </html>
